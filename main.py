@@ -10,7 +10,6 @@ if __name__ == '__main__':
     df = pandas.DataFrame(columns = ['Position', 'Team', 'Played', 'Won', 'Loss', 'GF', 'GA', 'GD', 'Points'])
     for row in table.find_all('tr'):
         if row['class'] != ['expandable']:
-            # print(row['class'])
             obj = row.find_all('td')
             pos = obj[1].get_text().strip()
             team = obj[2].find(class_ = 'long').get_text()
