@@ -12,7 +12,6 @@ if __name__ == '__main__':
         if row['class'] != ['expandable']:
             # print(row['class'])
             obj = row.find_all('td')
-            # print(obj)
             pos = obj[1].get_text().strip()
             team = obj[2].find(class_ = 'long').get_text()
             played = obj[3].get_text()
